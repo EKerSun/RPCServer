@@ -1,0 +1,11 @@
+// 版本声明
+syntax = "proto3";
+// 包名
+package rpcserver;
+// RPC请求头
+message RpcHeader
+{
+    bytes service_name = 1; // 服务名
+    bytes method_name = 2; // 方法名
+    uint32 args_size = 3; // 参数大小
+}
