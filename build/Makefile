@@ -117,17 +117,43 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named RPCServer
+# Target rules for targets named rpcserver
 
 # Build rule for target.
-RPCServer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 RPCServer
-.PHONY : RPCServer
+rpcserver: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rpcserver
+.PHONY : rpcserver
 
 # fast build rule for target.
-RPCServer/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/RPCServer.dir/build.make src/CMakeFiles/RPCServer.dir/build
-.PHONY : RPCServer/fast
+rpcserver/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/rpcserver.dir/build.make src/CMakeFiles/rpcserver.dir/build
+.PHONY : rpcserver/fast
+
+#=============================================================================
+# Target rules for targets named provider
+
+# Build rule for target.
+provider: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 provider
+.PHONY : provider
+
+# fast build rule for target.
+provider/fast:
+	$(MAKE) $(MAKESILENT) -f example/callee/CMakeFiles/provider.dir/build.make example/callee/CMakeFiles/provider.dir/build
+.PHONY : provider/fast
+
+#=============================================================================
+# Target rules for targets named consumer
+
+# Build rule for target.
+consumer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 consumer
+.PHONY : consumer
+
+# fast build rule for target.
+consumer/fast:
+	$(MAKE) $(MAKESILENT) -f example/caller/CMakeFiles/consumer.dir/build.make example/caller/CMakeFiles/consumer.dir/build
+.PHONY : consumer/fast
 
 # Help Target
 help:
@@ -137,7 +163,9 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... RPCServer"
+	@echo "... consumer"
+	@echo "... provider"
+	@echo "... rpcserver"
 .PHONY : help
 
 
