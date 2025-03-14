@@ -12,7 +12,7 @@ RPC分布式网络通信框架
 - muduo
 - protobuf
 - zookeeper
-# 项目树
+## 项目树
 ```.
 ├── CMakeLists.txt
 ├── bin                       # 测试用例可执行文件和测试配置文件
@@ -56,8 +56,17 @@ RPC分布式网络通信框架
     ├── rpcprovider.cc
     └── zookeeperutil.cc
 ```
-
-
+## 运行测试
+```bash
+# 在终端1中启动provider，提供服务
+cd bin
+./provider -i test.conf
+```
+```bash
+# 在终端2中启动consumer，调用远程服务
+cd bin
+./consumer -i test.conf
+```
 
 
 
