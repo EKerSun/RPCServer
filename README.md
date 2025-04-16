@@ -68,4 +68,6 @@ cd bin
 ./consumer -i test.conf
 ```
 
-
+## 后续工作
+- 无锁/双缓冲异步的日志系统
+- 完善controller模块
