@@ -1,0 +1,38 @@
+
+syntax = "proto3";
+
+package TheChat;
+
+message RpcHeader
+{
+    string service_name = 1; 
+    string method_name = 2; 
+    bytes params = 3; 
+}
+
+message ServiceMeta 
+{
+    string ip = 1; 
+    int32 port = 2;
+    bool keep_alive = 3;  // 长连接标识
+}
+
+message RequestHeader
+{
+    int32 message_id = 1;
+    bytes content = 2;
+}
+
+message ResponseHeader
+{
+    int32 message_id = 1;
+    bytes content = 2;
+}
+
+
+message ServiceEndpoint {
+    string ip = 1;     // 服务IP地址
+    uint32 port = 2;   // 服务端口
+    uint32 weight = 3; // 负载权重
+    string version = 4;// 服务版本
+  }
