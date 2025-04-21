@@ -11,7 +11,7 @@ class RpcApplication
 {
 public:
     // 初始化应用程序
-    static void Init();
+    static void Init(int argc, char **argv);
     // 获取应用程序实例
     static RpcApplication &GetInstance();
     // 获取应用程序配置
