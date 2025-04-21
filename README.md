@@ -72,10 +72,10 @@ RPC分布式网络通信框架
 ```
 ## 简单使用
 .....
-编译项目生成库文件librpcserver.a
-调用Provider提供服务
-使用stub调用TheRPCchannel的callmethod方法，调用远程服务
-后续提供简单的使用实例和接口说明
+- 编译项目生成库文件librpcserver.a
+- 调用Provider提供服务
+- 使用stub调用TheRPCchannel的callmethod方法，调用远程服务
+- 后续提供简单的使用实例和接口说明
 ## 后续工作
 - 完善controller和clousr的设计
 - 实现异步CallMethod方法
