@@ -14,6 +14,7 @@ RPC分布式网络通信框架
 - protobuf
 - zookeeper
 ## 项目树
+```bash
 .
 ├── CMakeLists.txt
 ├── README.md
@@ -68,6 +69,7 @@ RPC分布式网络通信框架
             ├── redis.cpp
             ├── scopedfd.cc
             └── zookeeperutil.cc
+```
 ## 简单使用
 .....
 编译项目生成库文件librpcserver.a
